@@ -112,7 +112,7 @@ container and the init container defined.
 1. Enable Azure Dev Spaces using the cli. This will also install `azds` cli which is required to work with aks dev spaces.
 
     ```bash
-    az aks use-dev-spacs -g <resource-group-name> -n <aks-cluster-name>
+    az aks use-dev-spaces -g <resource-group-name> -n <aks-cluster-name>
     ```
 
     Choose `y` when prompted to create Azure Dev Spaces Controller
