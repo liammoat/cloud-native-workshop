@@ -1,4 +1,5 @@
 # Cloud Native Workshop - Kubernetes
+*[[Return to Workshop](https://github.com/liammoat/cloud-native-workshop)]*
 
 ## Labs
 
@@ -13,5 +14,3 @@
 1. [Demo 01 - Getting Started with Kubernetes](./demos/01-getting-started-with-kubernetes.md)
 1. [Demo 02 - Advanced Kubernetes](./demos/02-advanced-kubernetes.md)
 1. [Demo 03 - Kubernetes Best Practices](./demos/03-kubernetes-best-practices.md)
-
-*[[Return to Workshop](https://github.com/liammoat/cloud-native-workshop)]*
