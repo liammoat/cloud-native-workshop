@@ -1,0 +1,26 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypodrestored
+spec:
+  tolerations:
+    ""
+  containers:
+  - name: mypodrestored
+    image: nginx:1.15.5
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 250m
+        memory: 256Mi
+    volumeMounts:
+    - mountPath: "/mnt/mydemo"
+      name: volume
+  volumes:
+    - name: volume
+      azureDisk:
+        kind: Managed
+        diskName: pvcRestored
+        diskURI: /subscriptions/e3d54713-6f10-4a1a-a672-94896d8b638e/resourceGroups/mc_lm-k8s-rg-n-eu_lm-k8s-aks_northeurope/providers/Microsoft.Compute/disks/pvcRestored
