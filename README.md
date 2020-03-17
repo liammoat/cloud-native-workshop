@@ -25,6 +25,7 @@ Explore Cloud Native technologies like Kubernetes and Helm.
 
     ```bash
     bash <(curl -Ls https://aka.ms/cloud-native-workshop/setup-script)
+    cd ~/cnw
     ```
 
 ### Kubernetes
