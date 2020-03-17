@@ -1,4 +1,5 @@
 # Cloud Native Workshop
+Explore Cloud Native technologies like Kubernetes and Helm.
 
 ## Labs
 
