@@ -94,8 +94,15 @@ container and the init container defined.
 ### Steps
 
 1. Install VS Code from https://code.visualstudio.com/ 
-2. Go to Extensions (ctrl + shift + x) and install Kubernetes Extension 
+
+2. Go to Extensions (ctrl + shift + x) and install `Kubernetes` Extension 
+
+    ![Bash](./imgs/04/03_k8s_extension.png)
+
 3. Click on the Kubernetes Icon from left panel and connect to existing cluster. (click on `...` and select `Add Existing CLuster` )
+
+    ![Bash](./imgs/04/03_k8s_add_existing_cluster.png)
+
 4. Explore the cluster and workloads created so far.
 
 ## Exercise 4 - Get Started with Azure Dev Spaces
@@ -129,19 +136,33 @@ container and the init container defined.
     dotnet new webapp -n <webapp-name>
     ```
 
-    Navigate to <webapp-name> directory Open it on vs code by typing `code .` in the terminal. If you're prompted to install required assets for `c#`, select `yes`.
+    Navigate / `cd` into <webapp-name> and Open it on vs code by typing `code .` in the terminal. If you're prompted to install required assets for `c#`, select `yes`. 
+    
+    > Note: Ensure `C#` extension is installed on vs code. Install it otherwise.  
+
+    ![Bash](./imgs/04/04_csharp_assets.png)
 
 4. Install azure devspaces extension for vs code either by selecting extensions or from [here](https://marketplace.visualstudio.com/items?itemName=azuredevspaces.azds)
 
     You may need to `reload` vs code after installing the extension.
 
+    ![Bash](./imgs/04/04_azds_vs_code_extension.png)
+
 5. Open Command Palette on vs code by using the shortcut `ctrl + shift + p` and type `azds`
 
     From the results, choose `Azure DevSpaces: Prepare Configuration` option. This will run `azds prep` behind the scenes and will also setup `launch` config for debugging.
 
-    Choose `yes` when prompted if you like to make the endpoint external. This is because for this lab, we will explore how to debug apps via their public endpoint. Choosing `no` here would mean we have to use port-forwarding from localhost. 
+    ![Bash](./imgs/04/04_azds_prep.png)
+
+    Choose `yes` when prompted to make the endpoint external. This is because for this lab, we will explore how to debug apps using their public endpoint. 
+
+    ![Bash](./imgs/04/04_azds_endpoint_type.png)
+
+    Choosing `no` here would mean the service will be private and debugging will be possible through port-forwarding into localhost. 
+
+    ![Bash](./imgs/04/04_azds_prep_confirmation.png)
     
-    >Note: In actual development environment, steps have to be taken to ensure https and authentication mechanisms are setup prior to public endpoint debugging.
+    >Note: In an actual development environment, steps must be taken to ensure https and authentication mechanisms are correctly setup prior to exposing any public endpoints for debugging.
 
     Notice the new files that are created. These include a dockerfile, helm charts, azds.yaml and launch configs.    
 
@@ -151,20 +172,24 @@ container and the init container defined.
 
     Choose `.Net Core Launch (AZDS)` to debug the app.
 
+    ![Bash](./imgs/04/04_azds_debug_option.png)
+
     >It will take a few minutes the first time to sync the files, build and deploy the app on kubernetes.
 
-    >You should be able to see a public uri for the app ending with `.azds.io` appearing on the output.
+    If debugger exits unexpectedly the first time, retry a couple more times.
 
+    >You should be able to see a public uri for the app ending with `.azds.io` appearing on the output.
+    
     >If it doesn't, type `azds list-uris` in a separate terminal session and copy the endpoint of your app.
 
-    Paste the endpoint in a browser and notice the breakpoint getting hit on vscode.
+    Paste the endpoint in a browser and notice the breakpoint getting hit on vscode. Step over the breakpoint and ensure the page is rendered on the browser.
 
     Stop debugging. And from terminal set to the <app-name> directory, type `azds down` to tear down your environment on aks. 
 
     Do another `azds list-up --all` to confirm.
 
 
-7. For a bit more advanced scenarios such as multi-service apps, refer to https://docs.microsoft.com/en-us/azure/dev-spaces/multi-service-netcore
+7. For debugging slightly more advanced scenarios such as multi-service apps with public web-app backed by a private web-api, refer to https://docs.microsoft.com/en-us/azure/dev-spaces/multi-service-netcore
 
 
 
