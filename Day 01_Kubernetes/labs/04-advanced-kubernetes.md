@@ -102,7 +102,7 @@ container and the init container defined.
 
 ### Steps
 
-1. Enable Azure Dev Spaces using the cli.
+1. Enable Azure Dev Spaces using the cli. This will also install `azds` cli which is required to work with aks dev spaces.
 
     ```bash
     az aks use-dev-spacs -g <resource-group-name> -n <aks-cluster-name>
@@ -112,4 +112,14 @@ container and the init container defined.
 
     Provide a name for the namepsace (for e.g. 'develop' when prompted for `type a number or a new name:` and choose `0` when prompted to select a parent.
 
-2. 
+2. Make sure the newly created devspace is selected.
+
+    ```bash
+    azds space list
+    ```
+    There should be asterisk next on left of the selected dev space.
+
+    Note: If you receive an error message such as `command not found`, it's likely because the azds extension is not fully installed. Try restarting the terminal or install `azds cli` from https://docs.microsoft.com/bs-latn-ba/azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
+
+3. 
+    
