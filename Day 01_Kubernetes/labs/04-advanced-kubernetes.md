@@ -119,7 +119,7 @@ container and the init container defined.
     ```
     There should be asterisk next on left of the selected dev space.
 
-    Note: If you receive an error message such as `command not found`, it's likely because the azds extension is not fully installed. Try restarting the terminal or install `azds cli` from [here](https://docs.microsoft.com/bs-latn-ba/azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools)
+    >Note: If you receive an error message such as `command not found`, it's likely because the azds extension is not fully installed. Try restarting the terminal or install `azds cli` from [here](https://docs.microsoft.com/bs-latn-ba/azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools)
 
 3. Create a new dotnet web application. 
 
@@ -129,7 +129,7 @@ container and the init container defined.
     dotnet new webapp -n <webapp-name>
     ```
 
-    Navigate to <webapp-name> directory Open it on vs code by typing `code .` in the terminal
+    Navigate to <webapp-name> directory Open it on vs code by typing `code .` in the terminal. If you're prompted to install required assets for `c#`, select `yes`.
 
 4. Install azure devspaces extension for vs code either by selecting extensions or from [here](https://marketplace.visualstudio.com/items?itemName=azuredevspaces.azds)
 
@@ -163,6 +163,8 @@ container and the init container defined.
 
     Do another `azds list-up --all` to confirm.
 
+
+7. For a bit more advanced scenarios such as multi-service apps, refer to https://docs.microsoft.com/en-us/azure/dev-spaces/multi-service-netcore
 
 
 
