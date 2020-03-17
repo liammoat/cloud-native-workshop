@@ -24,7 +24,13 @@ See [Lab 03, Exercise 3](../labs/03-state-config-and-jobs.md)
 
 See [Lab 04, Exercise 1](../labs/04-advanced-kubernetes.md)
 
-## Demo 5 - Working with Dev Spaces
+## Demo 5 - Working with PostStart Container Hooks
+
+### Steps [LIAM]
+
+See [Lab 04, Exercise 2](../labs/04-advanced-kubernetes.md)
+
+## Demo 6 - Working with Dev Spaces
 
 ### Steps [SUREN]
 
