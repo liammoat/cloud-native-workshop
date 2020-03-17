@@ -5,7 +5,28 @@ Explore Cloud Native technologies like Kubernetes and Helm.
 
 ### Getting Started
 
-*Coming soon*
+1. In your browser open Azure Cloud Shell by navigating to https://shell.azure.com.
+
+    > You will use Azure Cloud Shell for all labs in this workshop. See [here](https://docs.microsoft.com/en-us/azure/cloud-shell/using-the-shell-window) for some tips and tricks (like how to *copy* and *paste*).
+
+2. Check which subscription you have connected to:
+
+    ```bash
+    az account show
+    ```
+
+3. If you prefer, you can switch to a different subscription:
+
+    ```bash
+    az account set --subscription <subscription-name>
+    ```
+
+4. Within Cloud Shell, run the following command to download and execute the setup script:
+
+    ```bash
+    bash <(curl -Ls https://aka.ms/cloud-native-workshop/setup-script)
+    cd ~/cnw
+    ```
 
 ### Kubernetes
 
