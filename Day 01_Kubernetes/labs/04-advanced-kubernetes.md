@@ -119,7 +119,52 @@ container and the init container defined.
     ```
     There should be asterisk next on left of the selected dev space.
 
-    Note: If you receive an error message such as `command not found`, it's likely because the azds extension is not fully installed. Try restarting the terminal or install `azds cli` from https://docs.microsoft.com/bs-latn-ba/azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
+    Note: If you receive an error message such as `command not found`, it's likely because the azds extension is not fully installed. Try restarting the terminal or install `azds cli` from [here](https://docs.microsoft.com/bs-latn-ba/azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools)
 
-3. 
+3. Create a new dotnet web application. 
+
+    Install latest stable (3.1.x) dotnet core sdk from [here](https://dotnet.microsoft.com/download) if it's not already installed. 
+
+    ```bash
+    dotnet new webapp -n <webapp-name>
+    ```
+
+    Navigate to <webapp-name> directory Open it on vs code by typing `code .` in the terminal
+
+4. Install azure devspaces extension for vs code either by selecting extensions or from [here](https://marketplace.visualstudio.com/items?itemName=azuredevspaces.azds)
+
+    You may need to `reload` vs code after installing the extension.
+
+5. Open Command Palette on vs code by using the shortcut `ctrl + shift + p` and type `azds`
+
+    From the results, choose `Azure DevSpaces: Prepare Configuration` option. This will run `azds prep` behind the scenes and will also setup `launch` config for debugging.
+
+    Choose `yes` when prompted if you like to make the endpoint external. This is because for this lab, we will explore how to debug apps via their public endpoint. Choosing `no` here would mean we have to use port-forwarding from localhost. 
+    
+    Note: In actual development environment, steps have to be taken to ensure https and authentication mechanisms are setup prior to public endpoint debugging.
+
+    Notice the new files that are created. These include a dockerfile, helm charts, azds.yaml and launch configs.    
+
+    Place a breakpoint in `OnGet` method on `Pages/index.html.cs`  
+    
+6. Navigate to Debug option on left panel, (shortcut: ctrl + shift + d)
+
+    Choose `.Net Core Launch (AZDS)` to debug the app.
+
+    It will take a few minutes the first time to sync the files, build and deploy the app on kubernetes.
+
+    You should be able to see a public uri for the app ending with `.azds.io` appearing on the output.
+
+    If it doesn't, type `azds list-uris` in a separate terminal session and copy the endpoint of your app.
+
+    Paste the endpoint in a browser and notice the breakpoint getting hit on vscode.
+
+    Stop debugging. And from terminal set to the <app-name> directory, type `azds down` to tear down your environment on aks. 
+
+    Do another `azds list-up --all` to confirm.
+
+
+
+
+
     
