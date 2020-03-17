@@ -141,7 +141,7 @@ container and the init container defined.
 
     Choose `yes` when prompted if you like to make the endpoint external. This is because for this lab, we will explore how to debug apps via their public endpoint. Choosing `no` here would mean we have to use port-forwarding from localhost. 
     
-    Note: In actual development environment, steps have to be taken to ensure https and authentication mechanisms are setup prior to public endpoint debugging.
+    >Note: In actual development environment, steps have to be taken to ensure https and authentication mechanisms are setup prior to public endpoint debugging.
 
     Notice the new files that are created. These include a dockerfile, helm charts, azds.yaml and launch configs.    
 
@@ -151,11 +151,11 @@ container and the init container defined.
 
     Choose `.Net Core Launch (AZDS)` to debug the app.
 
-    It will take a few minutes the first time to sync the files, build and deploy the app on kubernetes.
+    >It will take a few minutes the first time to sync the files, build and deploy the app on kubernetes.
 
-    You should be able to see a public uri for the app ending with `.azds.io` appearing on the output.
+    >You should be able to see a public uri for the app ending with `.azds.io` appearing on the output.
 
-    If it doesn't, type `azds list-uris` in a separate terminal session and copy the endpoint of your app.
+    >If it doesn't, type `azds list-uris` in a separate terminal session and copy the endpoint of your app.
 
     Paste the endpoint in a browser and notice the breakpoint getting hit on vscode.
 
