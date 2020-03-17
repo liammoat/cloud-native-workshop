@@ -14,4 +14,4 @@
 1. [Demo 02 - Advanced Kubernetes](./demos/02-advanced-kubernetes.md)
 1. [Demo 03 - Kubernetes Best Practices](./demos/03-kubernetes-best-practices.md)
 
-*[[Return to Workshop](../)]*
+*[[Return to Workshop](https://github.com/liammoat/cloud-native-workshop)]*
