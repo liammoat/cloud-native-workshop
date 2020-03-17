@@ -99,9 +99,17 @@ container and the init container defined.
 4. Explore the cluster and workloads created so far.
 
 ## Exercise 4 - Get Started with Azure Dev Spaces
-...
 
 ### Steps
 
-1. Enable Azure Dev Spaces
+1. Enable Azure Dev Spaces using the cli.
+
+    ```bash
+    az aks use-dev-spacs -g <resource-group-name> -n <aks-cluster-name>
+    ```
+
+    Choose `y` when prompted to create Azure Dev Spaces Controller
+
+    Provide a name for the namepsace (for e.g. 'develop' when prompted for `type a number or a new name:` and choose `0` when prompted to select a parent.
+
 2. 

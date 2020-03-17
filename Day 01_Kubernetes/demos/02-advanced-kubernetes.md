@@ -28,4 +28,4 @@ See [Lab 04, Exercise 1](../labs/04-advanced-kubernetes.md)
 
 ### Steps [SUREN]
 
-TODO: Steps required?
+See [Lab 04, Exercise 4](../labs/04-advanced-kubernetes.md)
