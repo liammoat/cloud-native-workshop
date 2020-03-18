@@ -77,6 +77,8 @@ In this exercise, you will create an Azure Container Registry instance using the
     ```bash
     az aks update -n <aks-name> -g <aks-resource-group> --attach-acr <acr-name>
     ``` 
+    
+    > This step requires you to be an **Owner** or **Azure account administrator** on the Azure subscription. If this is not the case, an alternative approach is explained [here](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-service-principal#use-an-existing-service-principal).
 
 ## Exercise 3 - Interfacing with Kubernetes
 ```kubectl```, said *Kube-Control*, is the  command line interface for running commands against a Kubernetes clusters. In this execise, you will explore some useful features of ```kubectl``` that you may find useful.
