@@ -58,4 +58,4 @@ Explore Cloud Native technologies like Kubernetes and Helm.
 
 * **Suren Mohandass**
 
-    * GitHub: [@surenmcode](https://github.com/surenmcode)
+    * GitHub: [@suren-m](https://github.com/suren-m)
